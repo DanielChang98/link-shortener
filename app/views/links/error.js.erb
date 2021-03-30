@@ -1,0 +1,5 @@
+var element = document.getElementById('short-link');
+
+var html = "<%= j render 'error', message: @link.errors.full_messages.join(". ") << '.'%>"
+
+element.innerHTML = html;
