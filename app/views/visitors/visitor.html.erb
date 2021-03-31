@@ -13,7 +13,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><%= link_to @selected_link.id, '/visitors' %></th>
+                            <th scope="row"><%= @selected_link.id %></th>
                             <td><%= @selected_link.original_url %></td>
                             <td>https://linc-short.herokuapp.com/<%= @selected_link.lookup_code %></td>
                             <td><%= @selected_link.counter %></td>
