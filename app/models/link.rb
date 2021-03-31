@@ -12,7 +12,7 @@ class Link < ApplicationRecord
     end
 
     def shortened_url
-        "https://linc-shortener.herokuapp.com/#{lookup_code}"
+        "https://linc-short.herokuapp.com/#{lookup_code}"
     end
 
 end
