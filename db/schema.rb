@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_021836) do
+ActiveRecord::Schema.define(version: 2021_03_31_021809) do
 
   create_table "links", force: :cascade do |t|
     t.string "lookup_code"
     t.string "original_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "counter", default: 0
+  end
+
+  create_table "visitors", force: :cascade do |t|
+    t.string "ip"
+    t.integer "link_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["link_id"], name: "index_visitors_on_link_id"
   end
 
 end

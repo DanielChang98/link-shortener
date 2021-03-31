@@ -13,6 +13,8 @@ class LinksController < ApplicationController
 
     def show
         link = Link.find_by(lookup_code: params[:lookup_code])
+        link.update(counter: link.counter + 1)
+        link.visitors.create(ip: request.remote_ip)
         redirect_to link.original_url
     end
 

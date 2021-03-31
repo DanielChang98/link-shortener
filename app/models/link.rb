@@ -1,4 +1,5 @@
 class Link < ApplicationRecord
+    has_many :visitors
     validates_presence_of :lookup_code, :original_url
     validates_uniqueness_of :lookup_code
     validate :original_url_format

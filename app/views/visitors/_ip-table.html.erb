@@ -1,0 +1,16 @@
+<table class="table p-1">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Visitor's IP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% selected_link.visitors.each_with_index do |v, index| %>
+            <tr>
+                <th scope="row"><%= index+1 %></th>
+                <td><%= v.ip %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

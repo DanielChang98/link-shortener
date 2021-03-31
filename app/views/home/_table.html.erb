@@ -1,0 +1,20 @@
+<table class="table p-1">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Original URL</th>
+        <th scope="col">Shortened URL</th>
+        <th scope="col">Counter</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @link_all.each do |l| %>
+            <tr>
+                <th scope="row"><%= link_to l.id, { :controller => "visitors", :action => "show", :id => l.id } %></th>
+                <td><%= l.original_url %></td>
+                <td><a href="<%= l.shortened_url %>" class="alert-link" target="_blank">https://localhost:3000/<%= l.lookup_code %></a></td>
+                <td><%= l.counter %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

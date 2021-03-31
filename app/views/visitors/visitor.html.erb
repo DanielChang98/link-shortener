@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="p-5">
+        <div class="card">
+            <div class="card-body">
+                <table class="table p-1">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Original URL</th>
+                        <th scope="col">Shortened URL</th>
+                        <th scope="col">Counter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><%= link_to @selected_link.id, '/visitors' %></th>
+                            <td><%= @selected_link.original_url %></td>
+                            <td>https://localhost:3000/<%= @selected_link.lookup_code %></td>
+                            <td><%= @selected_link.counter %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%= render 'ip-table', selected_link: @selected_link %>
+    </div>
+</div>
+
