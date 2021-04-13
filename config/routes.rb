@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post "/links" => 'links#create'
   get "/visitors" => 'visitors#show'
   get "/:lookup_code" => 'links#show'
+  resources :users
 end
